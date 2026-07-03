@@ -1,0 +1,4 @@
+interface:
+  display_name: "雪球组合调仓"
+  short_description: "配置表头、预演并安全执行雪球组合目标权重调仓。"
+  default_prompt: "Use $xq-rebalance to guide a Chinese user through Xueqiu header setup, default portfolio saving, dry-run, and safe portfolio rebalancing."

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Local Xueqiu auth and private state
+.xq-rebalance/
+headers.txt
+cookies.txt
+portfolios.json
+
+# Generated plans/logs
+round_existing_plan.json
+*_generated_plan.json
+*.log

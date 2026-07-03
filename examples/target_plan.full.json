@@ -1,0 +1,14 @@
+{
+  "portfolio_market": "cn",
+  "mode": "full",
+  "targets": [
+    {
+      "stock_code": "SH510300",
+      "weight": 50
+    },
+    {
+      "stock_code": "SH511880",
+      "weight": 50
+    }
+  ]
+}

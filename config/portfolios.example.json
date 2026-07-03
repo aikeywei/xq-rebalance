@@ -1,0 +1,12 @@
+{
+  "default_portfolio_code": "ZH0000000",
+  "default_portfolio_market": "cn",
+  "portfolios": {
+    "default": {
+      "name": "example portfolio",
+      "code": "ZH0000000",
+      "market": "cn",
+      "default": true
+    }
+  }
+}

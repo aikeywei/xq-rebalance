@@ -1,0 +1,10 @@
+{
+  "portfolio_market": "cn",
+  "mode": "partial",
+  "targets": [
+    {
+      "stock_code": "SH510300",
+      "weight": 30
+    }
+  ]
+}
