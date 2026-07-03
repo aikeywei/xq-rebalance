@@ -4,6 +4,8 @@
 
 不要把 Cookie、Request Headers、表头内容发给别人。它们只保存到你自己电脑里。
 
+如果你还没有把这个仓库安装进 Codex，先看 `install-as-codex-skill.md`。这个 Skill 不是 npm 包，不用 `npx`。
+
 ## 你需要准备什么
 
 你只需要三样东西：

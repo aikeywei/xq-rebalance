@@ -21,6 +21,10 @@
 
 ## 快速开始
 
+如果你是想把它装进 Codex，先看：
+
+- [安装为 Codex Skill](references/install-as-codex-skill.md)
+
 新手先看：
 
 - [小白快速开始](references/quickstart-for-beginners.md)
@@ -30,6 +34,40 @@
 - [介绍与教程](references/intro-and-tutorial.md)
 - [登录表头获取与排坑](references/setup-auth-and-headers.md)
 - [调仓计划与安全检查](references/rebalance-plan-and-safety.md)
+
+## 安装为 Codex Skill
+
+这不是 npm 包，不用 `npx`。Codex Skill 的安装方式是把这个仓库下载到本机的 Codex skills 目录。
+
+最省事的方式是在 Codex 里说：
+
+```text
+安装 GitHub 仓库 https://github.com/aikeywei/xq-rebalance 根目录这个 skill，名称用 xq-rebalance。
+```
+
+如果当前 Codex 支持 `skill-installer`，它会自动安装。仓库的 `SKILL.md` 在根目录；如果自动安装失败，就用下面的手动安装方式。安装后重启 Codex。
+
+手动安装：
+
+Windows PowerShell:
+
+```powershell
+git clone https://github.com/aikeywei/xq-rebalance.git $env:USERPROFILE\.codex\skills\xq-rebalance
+py -m pip install -r $env:USERPROFILE\.codex\skills\xq-rebalance\requirements.txt
+```
+
+macOS:
+
+```bash
+git clone https://github.com/aikeywei/xq-rebalance.git ~/.codex/skills/xq-rebalance
+python3 -m pip install -r ~/.codex/skills/xq-rebalance/requirements.txt
+```
+
+重启 Codex 后，可以这样触发：
+
+```text
+使用 xq-rebalance，帮我配置雪球组合自动调仓。
+```
 
 ## 安装依赖
 
