@@ -4,7 +4,7 @@
 
 它适合这种场景：
 
-- 你有雪球组合，例如 `ZH3114624`。
+- 你已经在电脑浏览器登录雪球，并能在自己的组合页面看到组合名称旁边或页面地址里的 `ZH...` 组合代码。
 - 你有策略输出的目标权重。
 - 你想少做手工调仓，但又要保留预演、确认和核对流程。
 
@@ -71,8 +71,10 @@ python3 scripts/xq_rebalance.py --save-headers-from-clipboard
 
 ## 保存默认组合
 
+先在电脑浏览器登录雪球，打开自己的组合页面，找到组合名称旁边或地址栏 `/P/ZH...` 里的组合代码。把下面的 `ZHxxxxxxx` 换成你看到的真实代码：
+
 ```powershell
-python scripts/xq_rebalance.py --set-default-portfolio ZH3114624 --portfolio-alias default --portfolio-name "我的策略"
+python scripts/xq_rebalance.py --set-default-portfolio ZHxxxxxxx --portfolio-alias default --portfolio-name "我的策略"
 ```
 
 ## 生成当前持仓取整计划

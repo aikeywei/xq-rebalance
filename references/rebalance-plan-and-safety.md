@@ -36,7 +36,7 @@
 
 ```json
 {
-  "portfolio_code": "ZH3114624",
+  "portfolio_code": "ZHxxxxxxx",
   "portfolio_market": "cn",
   "mode": "full",
   "targets": [
@@ -48,7 +48,7 @@
 
 说明：
 
-- `portfolio_code` 是雪球组合代码，例如 `ZH3114624`。
+- `portfolio_code` 是雪球组合代码。先用电脑浏览器登录雪球，打开自己的组合页面，看组合名称旁边的 `ZH...`；如果页面没显示，就看地址栏 `/P/ZH...`。
 - `portfolio_market` A 股一般是 `cn`。
 - `stock_code` 要带交易所前缀，例如 `SH510300`、`SZ159915`。
 - `weight` 是目标百分比，不是金额、股数或价格。
@@ -66,7 +66,7 @@ SH511880,50
 单组合用户先保存默认组合：
 
 ```powershell
-python scripts/xq_rebalance.py --set-default-portfolio ZH3114624 --portfolio-alias default --portfolio-name "我的策略"
+python scripts/xq_rebalance.py --set-default-portfolio ZHxxxxxxx --portfolio-alias default --portfolio-name "我的策略"
 ```
 
 保存后，计划文件里可以不写 `portfolio_code`。

@@ -222,7 +222,7 @@ def save_config(path: Path, data: dict[str, Any]) -> None:
 def save_default_portfolio(args: argparse.Namespace) -> None:
     code = str(args.set_default_portfolio).strip().upper()
     if not code.startswith("ZH"):
-        raise ValueError("雪球组合代码通常以 ZH 开头，例如 ZH3114624")
+        raise ValueError("雪球组合代码通常以 ZH 开头。请在电脑网页版组合名称旁边或地址栏 /P/ZH... 里查看。")
 
     path = Path(args.config)
     data = load_config(path)
@@ -572,7 +572,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--config", default=str(DEFAULT_CONFIG_PATH), help="本机组合配置 JSON 路径。")
     parser.add_argument("--portfolio-alias", help="本机配置里的组合别名。")
     parser.add_argument("--portfolio-name", help="保存配置时使用的组合名称。")
-    parser.add_argument("--portfolio-code", help="雪球组合代码，例如 ZH3114624。")
+    parser.add_argument("--portfolio-code", help="雪球组合代码。请在电脑网页版组合名称旁边或地址栏 /P/ZH... 里查看。")
     parser.add_argument("--portfolio-market", default=None, help="雪球市场，A 股通常是 cn。")
     parser.add_argument("--set-default-portfolio", help="把这个组合代码保存为本机默认组合。")
     parser.add_argument("--tolerance", default="0.01", help="full 模式下目标权重合计容忍误差。")

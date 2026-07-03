@@ -10,15 +10,22 @@
 
 1. 电脑浏览器：Chrome 或 Edge。
 2. 雪球账号：能登录并看到自己的组合。
-3. 组合代码：形如 `ZH3114624`。
+3. 组合代码：电脑网页登录雪球后，在自己的组合页面里找 `ZH...`。
 
-组合代码在组合网页地址里：
+## 怎么找到组合代码
+
+先用电脑浏览器登录雪球，打开你的组合页面。组合代码通常有两个位置：
+
+1. 组合名称旁边的 `ZH...` 编号。
+2. 地址栏 `/P/ZH...` 后面的编号。
+
+地址栏通常类似：
 
 ```text
-https://xueqiu.com/P/ZH3114624
+https://xueqiu.com/P/ZHxxxxxxx
 ```
 
-其中 `ZH3114624` 就是组合代码。
+其中 `ZHxxxxxxx` 这一段就是组合代码。后面所有命令都要把它换成你自己看到的真实代码。
 
 ## Windows 第一次配置
 
@@ -77,10 +84,10 @@ C:\Users\<你的用户名>\.xq-rebalance\headers.txt
 
 ### 第 5 步：保存默认组合
 
-把下面的 `ZH3114624` 换成你的组合代码：
+把下面的 `ZHxxxxxxx` 换成你在组合名称旁边或地址栏看到的真实组合代码：
 
 ```powershell
-py scripts/xq_rebalance.py --set-default-portfolio ZH3114624 --portfolio-alias default --portfolio-name "我的雪球组合"
+py scripts/xq_rebalance.py --set-default-portfolio ZHxxxxxxx --portfolio-alias default --portfolio-name "我的雪球组合"
 ```
 
 ### 第 6 步：测试读取组合
@@ -144,10 +151,10 @@ python3 scripts/xq_rebalance.py --save-headers-from-clipboard
 
 ### 第 5 步：保存默认组合
 
-把下面的 `ZH3114624` 换成你的组合代码：
+把下面的 `ZHxxxxxxx` 换成你在组合名称旁边或地址栏看到的真实组合代码：
 
 ```bash
-python3 scripts/xq_rebalance.py --set-default-portfolio ZH3114624 --portfolio-alias default --portfolio-name "我的雪球组合"
+python3 scripts/xq_rebalance.py --set-default-portfolio ZHxxxxxxx --portfolio-alias default --portfolio-name "我的雪球组合"
 ```
 
 ### 第 6 步：测试读取组合

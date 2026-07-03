@@ -4,7 +4,7 @@
 
 `xq-rebalance` 用来辅助完成雪球组合自动调仓。它适合这种场景：
 
-- 你有一个雪球组合，例如 `ZH3114624`。
+- 你已经在电脑浏览器登录雪球，并能在自己的组合页面看到组合名称旁边或页面地址里的 `ZH...` 组合代码。
 - 你有一个策略，每天或每周会生成目标权重。
 - 你不想每次手动打开雪球组合逐个改权重。
 - 你希望先预演、确认无误后，再提交组合调仓。
@@ -69,10 +69,15 @@ py -m pip install easytrader
 python -m pip install easytrader
 ```
 
-2. 打开雪球组合页面并登录，例如：
+2. 用电脑浏览器打开雪球并登录，进入自己的组合页面。组合代码看两个地方：
+
+   - 优先看组合名称旁边的 `ZH...` 编号。
+   - 如果页面上没看到，就看地址栏 `/P/ZH...` 后面的编号。
+
+   地址栏通常类似：
 
 ```text
-https://xueqiu.com/P/ZH3114624
+https://xueqiu.com/P/ZHxxxxxxx
 ```
 
 3. 复制请求表头。推荐先看 `setup-auth-and-headers.md`，里面有截图排坑逻辑。
@@ -86,7 +91,7 @@ py scripts/xq_rebalance.py --save-headers-from-clipboard
 5. 保存默认组合：
 
 ```powershell
-py scripts/xq_rebalance.py --set-default-portfolio ZH3114624 --portfolio-alias default --portfolio-name "我的策略"
+py scripts/xq_rebalance.py --set-default-portfolio ZHxxxxxxx --portfolio-alias default --portfolio-name "我的策略"
 ```
 
 6. 读取当前持仓并生成取整计划：
@@ -119,10 +124,15 @@ py scripts/xq_rebalance.py --plan round_existing_plan.json --execute --confirm E
 python3 -m pip install easytrader
 ```
 
-2. 打开雪球组合页面并登录，例如：
+2. 用电脑浏览器打开雪球并登录，进入自己的组合页面。组合代码看两个地方：
+
+   - 优先看组合名称旁边的 `ZH...` 编号。
+   - 如果页面上没看到，就看地址栏 `/P/ZH...` 后面的编号。
+
+   地址栏通常类似：
 
 ```text
-https://xueqiu.com/P/ZH3114624
+https://xueqiu.com/P/ZHxxxxxxx
 ```
 
 3. 复制请求表头。
@@ -136,7 +146,7 @@ python3 scripts/xq_rebalance.py --save-headers-from-clipboard
 5. 保存默认组合：
 
 ```bash
-python3 scripts/xq_rebalance.py --set-default-portfolio ZH3114624 --portfolio-alias default --portfolio-name "我的策略"
+python3 scripts/xq_rebalance.py --set-default-portfolio ZHxxxxxxx --portfolio-alias default --portfolio-name "我的策略"
 ```
 
 6. 生成当前持仓取整计划：
@@ -201,7 +211,7 @@ JSON 示例：
 
 ```json
 {
-  "portfolio_code": "ZH3114624",
+  "portfolio_code": "ZHxxxxxxx",
   "portfolio_market": "cn",
   "mode": "full",
   "targets": [

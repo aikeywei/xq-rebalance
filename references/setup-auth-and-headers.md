@@ -48,10 +48,10 @@ macOS:
 
 适合不熟悉 Network 的用户。
 
-1. 打开雪球组合页面，例如：
+1. 用电脑浏览器登录雪球，打开自己的组合页面。组合代码看组合名称旁边的 `ZH...`，或者看地址栏 `/P/ZH...`。地址栏通常类似：
 
    ```text
-   https://xueqiu.com/P/ZH3114624
+   https://xueqiu.com/P/ZHxxxxxxx
    ```
 
 2. 确认已经登录。
@@ -87,7 +87,7 @@ macOS:
 7. 在请求列表里点真正属于雪球的请求，优先点名称类似：
 
    ```text
-   ZH3114624?...
+   ZHxxxxxxx?...
    ```
 
 8. 点右侧或下方的 `Headers`。
@@ -138,7 +138,7 @@ macOS:
 - 清空过滤框。
 - 勾选 `Preserve log`。
 - 刷新页面。
-- 找名称像 `ZH3114624?...` 的请求。
+- 找名称像 `ZHxxxxxxx?...` 的请求。
 - 点进去后看 `General -> Request URL` 是否是 `https://xueqiu.com/...`。
 
 ### 点到了卡巴斯基或其他插件请求
