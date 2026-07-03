@@ -2,6 +2,24 @@
 
 这份文档只解决安装问题：别人怎么把 `xq-rebalance` 放进自己的 Codex。
 
+## 首页安装句
+
+打开 Codex CLI 或 Codex 桌面版的新对话，直接复制：
+
+```text
+安装 GitHub 仓库 https://github.com/aikeywei/xq-rebalance 根目录这个 skill，名称用 xq-rebalance。
+```
+
+这句话是给 Codex 对话用的，不是在 PowerShell、Terminal 或浏览器地址栏里运行。
+
+如果 Codex 继续问仓库、路径或名称，就填：
+
+```text
+repo: aikeywei/xq-rebalance
+path: .
+name: xq-rebalance
+```
+
 ## 先说结论
 
 - 不是 npm 包。
@@ -28,7 +46,25 @@
 
 如果自动安装失败，通常是 installer 没有识别“仓库根目录就是 skill”。这时直接用下面的手动安装方式。
 
-## 方式 B：Windows 手动安装
+## 方式 B：用 skill-installer 脚本安装
+
+如果你正在用 Codex CLI，也可以让本机的系统 skill-installer 脚本安装。仓库根目录就是 skill，所以 `--path` 用 `.`。
+
+Windows PowerShell:
+
+```powershell
+py "$env:USERPROFILE\.codex\skills\.system\skill-installer\scripts\install-skill-from-github.py" --repo aikeywei/xq-rebalance --path . --name xq-rebalance
+```
+
+macOS:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo aikeywei/xq-rebalance --path . --name xq-rebalance
+```
+
+安装后重启 Codex。
+
+## 方式 C：Windows 手动安装
 
 打开 PowerShell，运行：
 
@@ -45,7 +81,7 @@ python -m pip install -r $env:USERPROFILE\.codex\skills\xq-rebalance\requirement
 
 然后重启 Codex。
 
-## 方式 C：macOS 手动安装
+## 方式 D：macOS 手动安装
 
 打开 Terminal，运行：
 

@@ -2,6 +2,50 @@
 
 雪球组合自动调仓 Skill。支持 Windows 和 macOS，用 `easytrader` 读取雪球组合、生成目标权重计划、dry-run 预演，并在明确确认后执行调仓。
 
+## 先安装到 Codex
+
+这不是 npm 包，不用 `npx`。这是 Codex Skill，安装方式是把本仓库放进本机 Codex skills 目录。
+
+### Codex CLI / Codex 桌面版
+
+打开 Codex 新对话，直接复制这句话：
+
+```text
+安装 GitHub 仓库 https://github.com/aikeywei/xq-rebalance 根目录这个 skill，名称用 xq-rebalance。
+```
+
+如果 Codex 问路径或名称，用：
+
+```text
+repo: aikeywei/xq-rebalance
+path: .
+name: xq-rebalance
+```
+
+安装完成后重启 Codex，然后说：
+
+```text
+使用 xq-rebalance，告诉我下一步怎么配置雪球组合。
+```
+
+### 手动安装
+
+Windows PowerShell:
+
+```powershell
+git clone https://github.com/aikeywei/xq-rebalance.git $env:USERPROFILE\.codex\skills\xq-rebalance
+py -m pip install -r $env:USERPROFILE\.codex\skills\xq-rebalance\requirements.txt
+```
+
+macOS:
+
+```bash
+git clone https://github.com/aikeywei/xq-rebalance.git ~/.codex/skills/xq-rebalance
+python3 -m pip install -r ~/.codex/skills/xq-rebalance/requirements.txt
+```
+
+更详细的安装排坑见：[安装为 Codex Skill](references/install-as-codex-skill.md)。
+
 它适合这种场景：
 
 - 你已经在电脑浏览器登录雪球，并能在自己的组合页面看到组合名称旁边或页面地址里的 `ZH...` 组合代码。
@@ -34,40 +78,6 @@
 - [介绍与教程](references/intro-and-tutorial.md)
 - [登录表头获取与排坑](references/setup-auth-and-headers.md)
 - [调仓计划与安全检查](references/rebalance-plan-and-safety.md)
-
-## 安装为 Codex Skill
-
-这不是 npm 包，不用 `npx`。Codex Skill 的安装方式是把这个仓库下载到本机的 Codex skills 目录。
-
-最省事的方式是在 Codex 里说：
-
-```text
-安装 GitHub 仓库 https://github.com/aikeywei/xq-rebalance 根目录这个 skill，名称用 xq-rebalance。
-```
-
-如果当前 Codex 支持 `skill-installer`，它会自动安装。仓库的 `SKILL.md` 在根目录；如果自动安装失败，就用下面的手动安装方式。安装后重启 Codex。
-
-手动安装：
-
-Windows PowerShell:
-
-```powershell
-git clone https://github.com/aikeywei/xq-rebalance.git $env:USERPROFILE\.codex\skills\xq-rebalance
-py -m pip install -r $env:USERPROFILE\.codex\skills\xq-rebalance\requirements.txt
-```
-
-macOS:
-
-```bash
-git clone https://github.com/aikeywei/xq-rebalance.git ~/.codex/skills/xq-rebalance
-python3 -m pip install -r ~/.codex/skills/xq-rebalance/requirements.txt
-```
-
-重启 Codex 后，可以这样触发：
-
-```text
-使用 xq-rebalance，帮我配置雪球组合自动调仓。
-```
 
 ## 安装依赖
 
